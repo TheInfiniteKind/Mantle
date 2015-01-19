@@ -154,6 +154,8 @@ static NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapter
 			};
 
 			*error = [NSError errorWithDomain:MTLJSONAdapterErrorDomain code:MTLJSONAdapterErrorInvalidJSONMapping userInfo:userInfo];
+			
+			NSLog(@"%@ - %@", NSLocalizedDescriptionKey, NSLocalizedFailureReasonErrorKey);
 		}
 
 		return nil;
